@@ -26,7 +26,6 @@ declare module 'vue' {
     Profile: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/Profile.vue')['default']
     Projects: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/Projects.vue')['default']
     Resume: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/Resume.vue')['default']
-    SimpleIconsNpm: typeof import('~icons/simple-icons/npm')['default']
     Skills: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/Skills.vue')['default']
     SubTitle: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/SubTitle.vue')['default']
     Title: typeof import('C:/Development/Projects/Web/mackcutler-resume/src/components/Title.vue')['default']
