@@ -13,7 +13,7 @@ const { t } = useI18n()
       print:text="no-underline"
       text="underline"
     >
-      <a href="tel:+18607266992">(860) 726-6992</a>
+      <a href="tel:+19022038814">(902) 203-8814</a>
     </Paragraph>
   </div>
   <div class="contact-line">
@@ -25,7 +25,7 @@ const { t } = useI18n()
       print:text="no-underline"
       text="underline"
     >
-      <a href="mailto:cpgrimmeisen@gmail.com">cpgrimmeisen@gmail.com</a>
+      <a href="mailto:maccutler@protonmail.com">maccutler@protonmail.com</a>
     </Paragraph>
   </div>
   <div class="contact-line">
@@ -37,7 +37,7 @@ const { t } = useI18n()
       print:text="no-underline"
       text="underline"
     >
-      <a href="https://github.com/CarterGrimmeisen" target="_blank">CarterGrimmeisen</a>
+      <a href="https://github.com/mackcutlerdev" target="_blank">mackcutlerdev</a>
     </Paragraph>
   </div>
   <div class="contact-line">
@@ -49,7 +49,7 @@ const { t } = useI18n()
       print:text="no-underline"
       text="underline"
     >
-      <a href="https://linkedin.com/in/carter-grimmeisen" target="_blank">carter-grimmeisen</a>
+      <a href="https://linkedin.com/in/Mackenzie-Cutler" target="_blank">Mackenzie-Cutler</a>
     </Paragraph>
   </div>
   <div align="items-center" display="hidden" m="y-0 x-auto" print:flex="~">
@@ -61,7 +61,7 @@ const { t } = useI18n()
       print:text="no-underline"
       text="underline"
     >
-      <a href="https://cartergrimmeisen.com" target="_blank">cartergrimmeisen.com</a>
+      <a href="https://mackcutler.com" target="_blank">mackcutler.com</a>
     </Paragraph>
   </div>
 </template>

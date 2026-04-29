@@ -1,8 +1,8 @@
 <template>
   <div
-    bg="gray-200"
+    bg="white"
     class="a4"
-    dark:bg="gray-700"
+    dark:bg="[#4c2230]"
     display="block"
     m="y-[1.5cm] x-auto"
     print:bg="transparent"
@@ -26,11 +26,11 @@ button {
 }
 body {
   margin: 0;
-  @apply bg-gray-300;
+  background-color: #4e131c;
 }
 
 html.dark body {
-  @apply bg-gray-900;
+  background-color: #330C12;
 }
 .a4 {
   width: 25cm;

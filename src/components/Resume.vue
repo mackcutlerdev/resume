@@ -7,19 +7,23 @@
       <Contacts />
     </div>
     <div class="skills">
-      <Skills />
-      <div class="certifications">
-        <Certifications />
-      </div>
-    </div>
-    <div class="experience">
-      <Experience />
-      <div class="projects">
-        <Projects />
-      </div>
-    </div>
-    <div class="education">
       <Education />
+      <div class="skills-section">
+        <br>
+        <Skills />
+        <div class="certifications">
+          <Certifications />
+        </div>
+        <div class="profile">
+          <Profile />
+        </div>
+      </div>
+    </div>
+    <div class="projects">
+      <Projects />
+      <div class="experience">
+        <Experience />
+      </div>
     </div>
   </div>
 </template>
@@ -29,21 +33,27 @@
   display: grid;
   row-gap: 30px;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 190px 175px 205px auto auto;
+  grid-template-rows: 190px 175px auto auto;
   grid-template-areas:
     "header header"
     "contacts experience"
-    "education experience"
     "skills experience"
     "skills experience";
 }
 .contacts,
-.skills,
-.education {
+.skills {
   padding: 0 22.5px 0 45px;
 }
 
+.skills-section {
+  margin-top: 20px;
+}
+
 .certifications {
+  margin-top: 45px;
+}
+
+.profile {
   margin-top: 45px;
 }
 .projects {
@@ -85,19 +95,15 @@
 .experience {
   grid-area: experience;
 }
-.education {
-  grid-area: education;
-}
 
 @media (max-width: 25cm) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
       "header"
       "contacts"
       "experience"
-      "education"
       "skills";
   }
   .header {
@@ -105,19 +111,17 @@
   }
   .contacts,
   .skills,
-  .experience,
-  .skills,
-  .education {
+  .experience {
     padding: 0 20px 0 20px !important;
   }
 }
 @media print {
   .wrapper {
-    grid-template-rows: auto 200px 200px auto;
+    grid-template-rows: auto 200px auto auto;
     grid-template-areas:
       "header header"
       "contacts experience"
-      "education experience"
+      "skills experience"
       "skills experience"
   }
 }

@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
           <bi-sun-fill v-if="isDark" align="items-center" flex="~" font="leading-0" text="18px white" />
           <bi-moon-fill v-else align="items-center" flex="~" font="leading-0" text="18px" />
         </Button>
-        <Button href="https://github.com/CarterGrimmeisen/resume">
+        <Button href="https://github.com/mackcutlerdev/resume">
           <bi-github align="items-center" dark:text="white" flex="~" font="leading-0" text="18px" />
         </Button>
       </div>
@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
     <div class="box">
       <div class="person-info">
         <Title class="person-info-name">
-          Carter Grimmeisen
+          Mack Cutler
         </Title>
         <SubTitle class="person-info-position">
           {{ t('info.title') }}

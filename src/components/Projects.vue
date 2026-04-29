@@ -2,7 +2,9 @@
 import { Messages } from '../types'
 const { t, messages } = useI18n()
 
-const projectCount = computed(() => (messages.value as Messages)?.en?.projects?.length)
+const projects = computed(() => (messages.value as Messages)?.en?.projects ?? [])
+const projectCount = computed(() => projects.value.length)
+const projectUrl = (index: number) => (projects.value[index] as any)?.url
 </script>
 
 <template>
@@ -12,7 +14,12 @@ const projectCount = computed(() => (messages.value as Messages)?.en?.projects?.
   <section v-for="index in projectCount" :key="index" m="b-1em">
     <section align="items-center" flex="~" justify="between">
       <SubTitle hover:dark:text="blue-300" hover:text="blue-800">
-        <a :href="t(`projects[${index - 1}].github`)" print:text="!no-underline" style="text-decoration: underline" target="_blank">
+        <a
+          :href="projectUrl(index - 1) || t(`projects[${index - 1}].github`)"
+          print:text="!no-underline"
+          style="text-decoration: underline"
+          target="_blank"
+        >
           {{ t(`projects[${index - 1}].name`) }}
         </a>
       </SubTitle>
@@ -20,13 +27,9 @@ const projectCount = computed(() => (messages.value as Messages)?.en?.projects?.
         <a :href="t(`projects[${index - 1}].github`)" print:display="hidden" target="_blank">
           <bi-github dark:text="white" m="l-1" text="black" />
         </a>
-        <a :href="t(`projects[${index - 1}].npm`)" m="l-1" print:display="hidden" target="_blank">
-          <simple-icons-npm dark:text="white" m="l-1" text="black" />
+        <a v-if="projectUrl(index - 1)" :href="projectUrl(index - 1)" m="l-1" print:display="hidden" target="_blank">
+          <bi-circle-fill m="l-1" text="red-500" />
         </a>
-
-        <p display="hidden" font="normal tracking-normal" print:display="block" text="paragraph black normal-case">
-          {{ t(`projects[${index - 1}].npm`) }}
-        </p>
       </SubTitle>
     </section>
 

@@ -20,7 +20,7 @@ function experienceForIndex(index: number, prop: string) {
       <SubTitle p="r-45px">
         {{ experienceForIndex(index, 'position') }}
       </SubTitle>
-      <SubTitle text="blue-500 14px uppercase right" v-html="experienceForIndex(index, 'period')" />
+      <SubTitle text="[#d1344e] 14px uppercase right" v-html="experienceForIndex(index, 'period')" />
     </section>
 
     <Headline>
@@ -31,7 +31,7 @@ function experienceForIndex(index: number, prop: string) {
         v-for="(bullet, i) in experienceDescriptions[index]"
         :key="i"
         class="bullet"
-        dark:text="gray-300"
+        dark:text="gray-200"
         font="leading-22px"
         m="0"
         text="15px gray-800"
